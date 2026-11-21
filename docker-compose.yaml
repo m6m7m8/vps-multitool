@@ -1,0 +1,10 @@
+services:
+  multitool-bot:
+    build: ./bot
+    container_name: multitool-bot
+    restart: unless-stopped
+    mem_limit: 256m
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
